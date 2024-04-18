@@ -1,0 +1,374 @@
+#root,
+.App,
+#app,
+.home {
+    width: 100%;
+    height: 100%;
+    font-size: 10px
+}
+
+
+/* 重置样式 start */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+
+/* structural elements 结构元素 */
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+
+/* list elements 列表元素 */
+
+pre,
+
+/* text formatting elements 文本格式元素 */
+
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+
+/* form elements 表单元素 */
+
+th,
+td
+/* table elements 表格元素 */
+
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    min-height: 100vh;
+}
+
+
+/** 设置默认字体 **/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+
+
+/* 将斜体扶正 */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: microsoft yahei, courier new, courier, monospace;
+}
+
+small {
+    font-size: 12px;
+}
+
+
+/* 小于 12px 的中文很难阅读, 让 small 正常化 */
+
+
+/** 重置列表元素 **/
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/** 重置文本格式元素 **/
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+
+/* 重置, 减少对行高的影响 */
+
+sub {
+    vertical-align: text-bottom;
+}
+
+
+/** 重置表单元素 **/
+
+legend {
+    color: #000;
+}
+
+
+/* for ie6 */
+
+fieldset,
+img {
+    border: 0;
+}
+
+
+/* img 搭车：让链接里的 img 无边框 */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+
+
+/* 注：optgroup 无法扶正 */
+
+
+/** 重置表格元素 **/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* 重置 HTML5 元素 */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    outline-style: none;
+    vertical-align: top;
+    background-color: #fff;
+    margin-right: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: none;
+    cursor: auto;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    /*兼容处理盒模型*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*去除移动高亮事件*/
+    -moz-webkit-tap-highlight-color: transparent;
+    -ms-webkit-tap-highlight-color: transparent;
+    -o-webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    border: 0 none;
+    outline: none;
+    vertical-align: top;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.clearfix::after {
+    content: '';
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+
+/*媒体查询字体大小*/
+
+@media screen and (min-width: 751px) {}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #D9CEC3;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #D9CEC3;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #D9CEC3;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #D9CEC3;
+}
+
+
+/*定位*/
+
+.alignLeft {
+    float: left;
+    *float: left;
+}
+
+.alignRight {
+    float: right;
+    *float: right;
+}
+
+
+.musicPosition{
+    width:50px;
+    height:50px;
+    position:fixed;
+    right:60px;
+    top:60px;
+    z-index: 10000;
+}
+.layoutContianer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.layoutMain{
+    min-height: calc(100% - 230px);
+}
+
+
+.scroll_bar::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 2px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+    }
+
+.scroll_bar::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #EDEDED;
+    }
+
+.scroll_bar::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0px;
+}
+.scroll_bar{
+    width: 100%;
+    height: 100%;
+}
+
+.overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    white-space: nowrap; 
+}
+
+.overflow2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    white-space: nowrap;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+@font-face {
+    font-family: ShangShouRuiLengTi2; 
+    src: url('./assets/font/Lets-go-Digital.TTF')
+}
+
+
+.titleFont{
+    font-family: ShangShouRuiLengTi2;
+    font-size: 32px;
+    text-shadow: 0px 0px 8px rgba(21, 238, 255, 0.66);
+    color: #CBD9F3;
+}
+
+
+text.highcharts-credits{
+	display: none;
+}
+
+
+.newCreatedDiv{
+    margin-left: -20px;
+    /* margin-top: -20px; */
+  }
